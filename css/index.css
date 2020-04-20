@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#container {
+  height: 500px;
+  width: 800px;
+  border: 1px solid black;
+  background-color: darkorchid;
+}
+/*# sourceMappingURL=index.css.map */
