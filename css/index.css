@@ -5,10 +5,11 @@
           box-sizing: border-box;
 }
 
-#container {
-  height: 500px;
-  width: 800px;
-  border: 1px solid black;
-  background-color: darkorchid;
+#canvas {
+  position: relative;
+}
+
+#canvas > div {
+  position: absolute;
 }
 /*# sourceMappingURL=index.css.map */
