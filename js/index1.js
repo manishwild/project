@@ -146,3 +146,9 @@ function loop() {
     requestAnimationFrame(loop)
 }
 loop()
+{/* <div style="position: relative;">
+ <canvas id="layer1" width="100" height="100" 
+   style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+ <canvas id="layer2" width="100" height="100" 
+   style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+</div> */}

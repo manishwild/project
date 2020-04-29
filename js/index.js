@@ -11,7 +11,7 @@ var pipeNorth = new Image();
 var pipeSouth = new Image();
 
 bird.src = "images/bird.png";
-bg.src = "images/bg.png";
+bg.src = "images/back.png";
 fg.src = "images/fg.png";
 pipeNorth.src = "images/pipeNorth.png";
 pipeSouth.src = "images/pipeSouth.png";
@@ -59,7 +59,7 @@ pipe[0] = {
 
 function draw(){
     
-    ctx.drawImage(bg,0,0);
+    ctx.drawImage(bg,0,0,800,600);
     
     
     for(var i = 0; i < pipe.length; i++){
@@ -91,7 +91,7 @@ function draw(){
         
     }
 
-    ctx.drawImage(fg,0,cvs.height - fg.height);
+    ctx.drawImage(fg,0,600-fg.height,800,600);
     
     ctx.drawImage(bird,bX,bY);
     
