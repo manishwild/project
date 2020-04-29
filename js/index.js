@@ -123,6 +123,9 @@ function draw(){
     
 }
 draw();
+getnews()
+
+}
 async function  getnews(){
     // getting the elements from html to be filled with data
     
@@ -151,6 +154,4 @@ async function  getnews(){
   
   }
   
-  getnews()
-
-}
+  
