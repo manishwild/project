@@ -22,7 +22,7 @@ pipeSouth.src = "images/pipeSouth.png";
 var gap = 85;
 var constant;
 
-var bX = 10;
+var bX = 100;
 var bY = 150;
 
 var gravity = 1.5;
@@ -38,13 +38,31 @@ fly.src = "sounds/fly.mp3";
 scor.src = "sounds/score.mp3";
 
 // on key down
-
-document.addEventListener("keydown",moveUp);
-
-function moveUp(){
-    bY -= 25;
+    let left = 0
+    let top = 0
+    window.onkeydown = function(e){
+        console.log(e);
+        //bY -= 15;
     fly.play();
-}
+    if(e.key == 'ArrowUp'){
+            bY -=10
+        }
+        if(e.key == 'ArrowDown'){
+            bY +=10
+        }
+        if(e.key == 'ArrowRight'){
+            bX +=10
+        }
+        if(e.key == 'ArrowLeft'){
+            bX -=10
+        }
+        
+    }  
+//document.addEventListener("onkeydown",moveUp);
+
+//function moveUp(){
+    
+//}
 
 // pipe coordinates
 
@@ -99,11 +117,40 @@ function draw(){
     
     ctx.fillStyle = "#000";
     ctx.font = "20px Verdana";
-    ctx.fillText("Score : "+score,10,cvs.height-20);
+    ctx.fillText("Score : "+score,100,cvs.height-20);
     
     requestAnimationFrame(draw);
     
 }
 draw();
-}
 
+}
+async function  getnews(){
+    // getting the elements from html to be filled with data
+    
+     
+    let url = 'http://newsapi.org/v2/top-headlines?' +
+    'country=us&' +
+    'apiKey=49930c4220cf4050a021dc4c581f54ac';
+    
+  let data = await fetch(url)
+  if(data.status == 200){
+     let news = await data.json()
+     console.log(news)
+    
+  news.articles.forEach(element => {
+    let text = document.getElementById('text')
+    
+    console.log(element);
+    
+    text.innerText +=element.title +"*+**+*|*+**+ *"
+     
+  
+  });
+  
+     
+  } 
+  
+  }
+  
+  getnews()
