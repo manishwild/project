@@ -130,7 +130,7 @@ async function  getnews(){
     // getting the elements from html to be filled with data
     
      
-    let url = 'http://newsapi.org/v2/top-headlines?' +
+    let url = 'https://newsapi.org/v2/top-headlines?' +
     'country=us&' +
     'apiKey=49930c4220cf4050a021dc4c581f54ac';
     
